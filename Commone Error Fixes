@@ -1,0 +1,25 @@
+/**
+ * WordPress Common Fixes Snippets
+ * Use this repo to quickly apply recurring solutions.
+ */
+
+/*--------------------------------------------------------------
+1. Hide titles in Astra theme
+File: Appearance > Customize > Additional CSS
+or a child theme stylesheet
+--------------------------------------------------------------*/
+/* CSS */
+.ast-single-post .entry-title,
+.page .entry-title {
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+2. Fix cookie error in Multisite ("Cookies are blocked or not supported…")
+File: wp-config.php
+Placement: After multisite constants, before "That's all, stop editing!"
+--------------------------------------------------------------*/
+// Prevent WordPress from forcing cookies only on the main domain.
+// Required in subdomain-based networks to allow logins across subsites.
+define( 'COOKIE_DOMAIN', '' );
