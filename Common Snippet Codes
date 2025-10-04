@@ -1,6 +1,6 @@
 /**
  * WordPress Common Fixes Snippets
- * Use this repo to quickly apply recurring solutions.
+ * Use this repo to apply recurring solutions quickly.
  */
 
 /*--------------------------------------------------------------
@@ -23,3 +23,16 @@ Placement: After multisite constants, before "That's all, stop editing!"
 // Prevent WordPress from forcing cookies only on the main domain.
 // Required in subdomain-based networks to allow logins across subsites.
 define( 'COOKIE_DOMAIN', '' );
+
+/*--------------------------------------------------------------
+3. Glassmorphism Effect for Elementor Widgets
+File: Elementor > Advanced > Custom CSS (or global stylesheet)
+--------------------------------------------------------------*/
+selector {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); /* Optional: subtle transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: frosted border */
+    border-radius: 12px; /* Optional: smooth rounded corners */
+}
+
